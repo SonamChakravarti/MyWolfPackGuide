@@ -4,8 +4,7 @@
 <p><%- for calendar in @cal %>
 <%- events=calendar.events %>
 	<%- for event in events %>	
-	<%= event.title %>
-	<%= event.id %><br></br>
+	<li><%=link_to event.title,:controller=>'events',:action=>'event_detail',:calendar_name => 'CSC-WEB', :event_title =>event.title %></li><br></br>
 	<%- end %>
 <%- end %>
 </p>

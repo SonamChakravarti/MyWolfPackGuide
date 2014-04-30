@@ -1,7 +1,6 @@
 class EventsController < ApplicationController
 
 	@@event_id =0
-
 	def self.event_id
 		@@event_id		
 	end
@@ -12,6 +11,12 @@ class EventsController < ApplicationController
 	end
 
 	def event_detail
+		@event_title=params[:event_title]
+		cal_title=params[:calendar_title].to_s
+		service = GCal4Ruby::Service.new
+   		service.authenticate("the.wolfpackguide@gmail.com", "admin2wolfpack")
+    	@cal = GCal4Ruby::Calendar.find(service,cal_title, {})
+
 		event_id=params[:eid]
 		uid=session[:uid]
 		@rsvp_button_flag=false
