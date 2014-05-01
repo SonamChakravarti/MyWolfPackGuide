@@ -149,9 +149,16 @@ class UsersController < ApplicationController
 
 
   def home_page
+    @calid = Array.new
+    @calid << "http://www.google.com/calendar/feeds/ncsu.edu_hpasl5cmtenq7biv0omve1nvq8@group.calendar.google.com/public/basic"
+    @calid << "https://www.google.com/calendar/feeds/ncsu.edu_olma5do53nidmtbjtc9d7l0ue0%40group.calendar.google.com/public/basic"
+
+
+=begin
     service = GCal4Ruby::Service.new
     service.authenticate("the.wolfpackguide@gmail.com", "admin2wolfpack")
     @cal = GCal4Ruby::Calendar.find(service, 'CSC-WEB', {})
+=end
 
 
     # events = GCal4Ruby::Event.find(cal,"",
