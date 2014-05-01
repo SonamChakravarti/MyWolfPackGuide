@@ -33,6 +33,9 @@ gem 'bcrypt-ruby'
 # Alternate solution to accessing calendars
 gem 'gcal4ruby', '~> 0.5.5'
 
+# jquery plugin that gives an event calendar
+gem 'fullcalendar-rails'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
