@@ -3,7 +3,7 @@ class FlyersController < ApplicationController
   private
 
   def flyer_params
-    params.require(@flyer).permit(:category_id, :flyer_name, :image)
+    params.require(:flyer).permit(:category_id, :flyer_name, :image)
   end
 
 
@@ -16,8 +16,8 @@ class FlyersController < ApplicationController
   end
 
   def create
-    @flyer=Flyer.new(flyer_params)
-    if(@flyer.save!)
+    @flyers=Flyer.new(flyer_params)
+    if(@flyers.save!)
       flash[:notice]="Flyer successfully added"
     else
       flash[:error]="Something went wrong, Flyer addition failed"
@@ -27,8 +27,8 @@ class FlyersController < ApplicationController
   end
 
   def show
-      @Catdisp=Category.all
-      @flyerdisp=Flyer.all
+    @Catdisp=Category.all
+    @flyerdisp=Flyer.all
   end
 
 
@@ -53,7 +53,7 @@ class FlyersController < ApplicationController
   end
 
   def delete
-      Flyer.find(params[:id]).destroy
+    Flyer.find(params[:id]).destroy
     flash[:success] = "Category deleted."
     redirect_to    '/flyers/show'
 
