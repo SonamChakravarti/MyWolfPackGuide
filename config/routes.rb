@@ -51,6 +51,26 @@ MyWolfPackGuide::Application.routes.draw do
   get 'events/detail' => 'events#event_detail'
   post 'events/detail' => 'events#event_detail'
 
+  get 'flyers/new' => 'flyers#new'
+  post 'flyers/new' => 'flyers#new'
+
+  get 'flyers/create' => 'flyers#create'
+  post 'flyers/create' => 'flyers#create'
+
+
+  get 'flyers/edit' => 'flyers#edit'
+  post 'flyers/edit' => 'flyers#edit'
+
+  get 'flyers/delete' => 'flyers#delete'
+  post 'flyers/delete' => 'flyers#delete'
+
+  get 'flyers/show' => 'flyers#show'
+  post 'flyers/show' => 'flyers#show'
+
+
+  get 'flyers/update' => 'flyers#update'
+  post 'flyers/update' => 'flyers#update'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -60,6 +80,7 @@ MyWolfPackGuide::Application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
+  resources :flyers
   # Example resource route with options:
   #   resources :products do
   #     member do

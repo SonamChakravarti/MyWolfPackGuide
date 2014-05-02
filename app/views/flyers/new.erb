@@ -1,0 +1,20 @@
+<%= form_for @flyer, :html => {:multipart => true} do |f| %>
+    <p>
+      <%= f.label :flyer_name %><br />
+      <%= f.text_field :flyer_name %>
+    </p>
+    <p>
+      <% @list1=Category.all %>
+      <% options = options_from_collection_for_select(@list1, 'id', 'name') %>
+      <%=  f.label :category_id %>
+      <%= f.select :category_id,  options %> </p>
+    </p>
+    <p>
+      <%= f.file_field :image %>
+    </p>
+    <p>
+      <%= f.label :remote_image_url, "or image URL" %><br />
+      <%= f.text_field :remote_image_url %>
+    </p>
+    <p><%= f.submit %></p>
+<% end %>
