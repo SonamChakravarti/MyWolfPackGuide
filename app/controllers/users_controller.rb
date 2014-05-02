@@ -155,29 +155,10 @@ class UsersController < ApplicationController
     @calid << "http://www.google.com/calendar/feeds/ncsu.edu_hpasl5cmtenq7biv0omve1nvq8@group.calendar.google.com/public/basic"
     @calid << "https://www.google.com/calendar/feeds/ncsu.edu_olma5do53nidmtbjtc9d7l0ue0%40group.calendar.google.com/public/basic"
 
-
-=begin
     service = GCal4Ruby::Service.new
     service.authenticate("the.wolfpackguide@gmail.com", "admin2wolfpack")
-    @cal = GCal4Ruby::Calendar.find(service, 'CSC-WEB', {})
-=end
+    session[:service]=service
 
-
-    # events = GCal4Ruby::Event.find(cal,"",
-    #    {
-    #     :range => {:start => Time.parse("10/04/2014"),:end => Time.parse("25/04/2014")}
-    #    })
-
-    # events = GCal4Ruby::Event.find(service, "WiCS", {
-    #	   :calendar => 'ncsu.edu_hpasl5cmtenq7biv0omve1nvq8@group.calendar.google.com', 'start-min' => Time.parse("10/04/2014").utc.xmlschema,
-    #	   'start-max' => Time.parse("25/04/2014").utc.xmlschema
-    #	})
-
-    # events = GCal4Ruby::Event.find(service, "WiCS", {:calendar => cal.id})
-
-    #for event in events
-    #   puts event.title
-    # end
   end
 
   def admin_home

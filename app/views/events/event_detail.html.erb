@@ -1,10 +1,30 @@
 <h1>Event Detail Page</h1>
 
-
-<%= for event in @thisEvent %>
-<%= event %>
+<% for calendar in @cal %>
+<% events=calendar.events %>
+	<% for eve in events %>
+		<% if eve.title==@event_title %>
+		<% params[:calendar_id]=calendar.id %>
+		<p>Event Title:		 <%= eve.title %></p><br></br>
+		<p>Event Venue:	  <%= eve.where%></p><br></br>
+		<p>Event Start time:	  <%= eve.start_time %></p><br></br>
+		<p>Event End time:	  <%= eve.end_time %></p><br></br>
+		<p>Event Content:	  <%= eve.content %></p><br></br> 
+		<p>Event Published:	  <%= eve.published %></p><br></br> 
+		<p>Event Last Updated:	  <%= eve.updated %></p><br></br>
+		<p>Event Author Name:	  <%= eve.author_name%></p><br></br>
+		<p>Event Author Email:	  <%= eve.author_email%></p><br></br>		
+		<% end %>
+	<% end %>
 <% end %>
+
 <!-- render the partial for rsvp here -->
 <%= render "rsvp_edit_detail" %>
+<br></br>
+<br></br>
+<li><%= link_to "Back" ,'/home_page'%></li>
+<br></br>
+<br></br>
+
 
 
