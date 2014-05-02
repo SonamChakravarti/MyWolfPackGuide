@@ -56,6 +56,7 @@ function transformOptions(sourceOptions, start, end) {
 		endParam: false,
 		success: function(data) {
 			var events = [];
+            var cal = data.feed.title.$t;
 			if (data.feed.entry) {
 				$.each(data.feed.entry, function(i, entry) {
 					var startStr = entry['gd$when'][0]['startTime'];
@@ -77,12 +78,13 @@ function transformOptions(sourceOptions, start, end) {
 					events.push({
 						id: entry['gCal$uid']['value'],
 						title: entry['title']['$t'],
-						url: url,
+						url: "http://localhost:3000/events/detail?eid="+entry['gCal$uid']['value'],
 						start: start,
 						end: end,
 						allDay: allDay,
 						location: entry['gd$where'][0]['valueString'],
-						description: entry['content']['$t']
+						//description: entry['content']['$t']
+                        description: cal
 					});
 				});
 			}
