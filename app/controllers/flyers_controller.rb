@@ -3,7 +3,7 @@ class FlyersController < ApplicationController
   private
 
   def flyer_params
-    params.require(:flyer).permit(:category_id, :flyer_name, :image)
+    params.require(@flyer).permit(:category_id, :flyer_name, :image)
   end
 
 
