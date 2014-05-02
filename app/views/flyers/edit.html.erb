@@ -1,0 +1,8 @@
+<h1>Flyers Edit Page</h1>
+<%= form_for(@flyeredit, :url=>{:action => 'update',:id=>@flyeredit.id}) do |f| %>
+
+    <%= f.label :name %>
+    <%= text_field_tag :name, @flyeredit.flyer_name %>  <br>
+
+    <%= f.submit "Save changes" %>
+<% end %>

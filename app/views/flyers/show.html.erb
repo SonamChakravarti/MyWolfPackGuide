@@ -1,0 +1,53 @@
+    <h1 align="center">Flyers</h1>
+    <% if User.find(session[:uid]).user_type=='A' %>
+        <p align="center">
+          <% @Catdisp.each do |cat| %>
+              <%= cat.name %><br>
+              <% catid=cat.id %>
+              <% val=Flyer.find_all_by_category_id(cat.id) %>
+              <% if val %>
+                  <% val.each do |subVal| %>
+                      <%= subVal.flyer_name %>  <br>
+                      <%= image_tag subVal.image_url(:thumb).to_s  if subVal.image?  %> <br>
+                      <% if User.find(session[:uid]).user_type=='A' %>
+                          <%= link_to 'Delete', {:action => 'delete', :id => subVal.id}, :confirm => "Are you sure you want to delete this Calendar?" %>
+                          <%= link_to 'Edit', {:action => 'edit', :id => subVal.id} %> <br> <br>
+                      <%end %>
+                  <%end%>
+                  <br>
+                  <br>
+              <% end %>
+          <% end %>
+        </p>
+        <li><%= link_to 'Back', {:controller => 'users', :action=>'admin_home'} %></li>
+     <% end %>
+     <% if User.find(session[:uid]).user_type=='N' %>
+        <% arr=User.find(session[:uid]).user_interest %>
+        <p align="center">
+          <% @Catdisp.each do |cat| %>
+              <% if arr.include?(cat.id.to_s) %>
+              <%= cat.name %><br>
+              <% catid=cat.id %>
+              <% val=Flyer.find_all_by_category_id(cat.id) %>
+              <% if val %>
+                  <% val.each do |subVal| %>
+                      <%= subVal.flyer_name %>  <br>
+                      <%= image_tag subVal.image_url(:thumb).to_s  if subVal.image?  %> <br>
+                      <% if User.find(session[:uid]).user_type=='A' %>
+                          <%= link_to 'Delete', {:action => 'delete', :id => subVal.id}, :confirm => "Are you sure you want to delete this Calendar?" %>
+                          <%= link_to 'Edit', {:action => 'edit', :id => subVal.id} %> <br> <br>
+                      <%end %>
+                  <%end%>
+                  <br>
+                  <br>
+              <% end %>
+                  <% end %>
+          <% end %>
+        </p>
+        <li><%= link_to 'Back', {:controller => 'users', :action=>'home_page'} %></li>
+    <% end %>
+
+
+
+
+
