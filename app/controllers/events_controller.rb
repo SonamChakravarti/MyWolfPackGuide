@@ -15,8 +15,8 @@ class EventsController < ApplicationController
 		cal_title=params[:calendar_title].to_s
 		service = GCal4Ruby::Service.new
    		service.authenticate("the.wolfpackguide@gmail.com", "admin2wolfpack")
-    	@cal = GCal4Ruby::Calendar.find(service,cal_title, {})
-
+    	#@cal = GCal4Ruby::Calendar.find(service,cal_title, {})
+    	@thisEvent = GCal4Ruby::Event.find(service, params[:etitle])
 		event_id=params[:eid]
 		uid=session[:uid]
 		@rsvp_button_flag=false
