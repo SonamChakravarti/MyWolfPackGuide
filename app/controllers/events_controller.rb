@@ -10,6 +10,14 @@ class EventsController < ApplicationController
 		@@event_id=value
 	end
 
+
+	def rsvp_events
+		# display all the rsvp'd events for the logged in user
+		
+	end
+
+
+
 	def rsvp_save
 		event_title= params[:hid_etitle]
 		cal_title= params[:hid_calName]
