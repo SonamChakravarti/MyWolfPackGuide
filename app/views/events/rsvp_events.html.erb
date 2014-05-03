@@ -1,0 +1,14 @@
+<h1>RSVP Events Page</h1> 
+<% if @rsvp_flag %>
+	<% @r_events.zip(@cal_events).each do |revent,cevent| %>
+	<br></br>
+	<p>Event Title:		 <%= revent.title %></p><br></br>
+	<p>Event Venue:	  <%= revent.where%></p><br></br>
+	<p>Event Start time:	  <%= revent.start_time %></p><br></br>
+	<p>Event End time:	  <%= revent.end_time %></p><br></br>
+	<p>--------------------------------------------------------------------------------------</p>
+	<br></br>
+	<% end %>
+<% else %>
+<p>No rsvp events as of now</p>
+<% end %>

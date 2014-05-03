@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140429140539) do
+ActiveRecord::Schema.define(version: 20140503174457) do
 
   create_table "calendars", force: true do |t|
     t.string   "name"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20140429140539) do
     t.integer  "uid"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "event_name"
   end
 
   create_table "users", force: true do |t|
