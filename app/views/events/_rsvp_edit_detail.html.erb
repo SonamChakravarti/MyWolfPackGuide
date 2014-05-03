@@ -2,8 +2,12 @@
 <div>
 <h3>RSVP Info</h3>	
 	<%- if @rsvp_button_flag %>
-		<%= form_tag ('/events/detail') do %>
-		  <%= submit_tag "Event RSVP", :eid=>params[:eid] %>
+		<%= form_tag ('/events/rsvp') do %>
+		<%= hidden_field_tag :hid_eid ,params[:eid] %>
+		<%= hidden_field_tag :hid_etitle ,@event_title %>
+		<%= hidden_field_tag :hid_calName  ,@cal_title %>
+		<%= hidden_field_tag :hid_calendar_id ,params[:calendar_id] %>
+		  <%= submit_tag "Event RSVP"  %>
 		<% end %>
 	<% else %>
 		<%= submit_tag "Event RSVP",disabled: true%>

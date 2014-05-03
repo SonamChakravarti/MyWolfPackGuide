@@ -51,6 +51,8 @@ MyWolfPackGuide::Application.routes.draw do
   get 'events/detail' => 'events#event_detail'
   post 'events/detail' => 'events#event_detail'
 
+  post 'events/rsvp' => 'events#rsvp_save'
+
   get 'flyers/new' => 'flyers#new'
   post 'flyers/new' => 'flyers#new'
 

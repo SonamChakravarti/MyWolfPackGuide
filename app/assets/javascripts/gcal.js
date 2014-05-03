@@ -78,7 +78,7 @@ function transformOptions(sourceOptions, start, end) {
 					events.push({
 						id: entry['gCal$uid']['value'],
 						title: entry['title']['$t'],
-						url: "http://localhost:3000/events/detail?eid="+entry['gCal$uid']['value'],
+						url: "http://localhost:3000/events/detail?eid="+entry['gCal$uid']['value']+"&etitle="+entry['title']['$t']+"&calName="+cal,
 						start: start,
 						end: end,
 						allDay: allDay,
