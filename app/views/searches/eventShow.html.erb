@@ -1,4 +1,5 @@
 <br>
+<h1>Event Search Results</h1>
 <% for eve in @event %>
         <p>Event Title:		 <%= eve.title %></p><br></br>
         <p>Event Venue:	  <%= eve.where%></p><br></br>
@@ -11,3 +12,7 @@
         <p>Event Author Email:	  <%= eve.author_email%></p><br></br>
 
 <% end %>
+<br></br>
+<li><%= link_to "Back" ,'/home_page'%></li>
+<br></br>
+<br></br>
