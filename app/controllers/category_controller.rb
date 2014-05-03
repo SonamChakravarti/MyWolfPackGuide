@@ -13,6 +13,7 @@ class CategoryController < ApplicationController
     @call=Category.find(params[:id])
     flash[:confirm]="Are you sure you want to edit this category?"
     @call.name=params[:name]
+    @call.is_dept=params[:dept]
     if (@call.save!)
       flash[:notice]="Category successfully edited"
     else

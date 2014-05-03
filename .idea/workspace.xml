@@ -7,8 +7,7 @@
       <change type="DELETED" beforePath="C:\Users\Sona\RubymineProjects\MyWolfPackGuide\.idea\dataSources.xml" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Sona\RubymineProjects\MyWolfPackGuide\public\uploads\flyer\image\1\1.jpg" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Sona\RubymineProjects\MyWolfPackGuide\public\uploads\flyer\image\1\thumb_1.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/category/_edit.html.erb" afterPath="$PROJECT_DIR$/app/views/category/_edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/category_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/category_controller.rb" />
     </list>
     <ignored path="MyWolfPackGuide.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,28 +44,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="eventShow.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="eventShow.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/searches/eventShow.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="83" selection-start="523" selection-end="523" vertical-scroll-proportion="-5.8846154">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_edit.html.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/category/_edit.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="45" selection-start="612" selection-end="612" vertical-scroll-proportion="0.4797048">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_addCat.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/category/_addCat.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="10" selection-start="448" selection-end="531" vertical-scroll-proportion="-7.1923075">
+            <state line="9" column="83" selection-start="523" selection-end="523" vertical-scroll-proportion="0.5387324">
               <folding />
             </state>
           </provider>
@@ -99,27 +80,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home_page.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/users/home_page.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="39" selection-start="689" selection-end="689" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1399149920930" expanded="true" signature="88:178" placeholder="{...}" />
-                <marker date="1399149920930" expanded="true" signature="126:170" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/users/new.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="6" selection-start="695" selection-end="905" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -136,7 +96,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/bin/rails" />
         <option value="$PROJECT_DIR$/config/application.rb" />
         <option value="$PROJECT_DIR$/app/models/flyers_helper.rb" />
         <option value="$PROJECT_DIR$/app/models/flyer.rb" />
@@ -152,6 +111,7 @@
         <option value="$PROJECT_DIR$/app/controllers/searches_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/searches/eventShow.html.erb" />
         <option value="$PROJECT_DIR$/app/views/category/_edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/category_controller.rb" />
       </list>
     </option>
   </component>
@@ -893,11 +853,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/login.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -929,8 +884,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="39" selection-start="689" selection-end="689" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1399149920930" expanded="true" signature="88:178" placeholder="{...}" />
-            <marker date="1399149920930" expanded="true" signature="126:170" placeholder="{...}" />
+            <marker date="1399149920930" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1399149920930" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -975,13 +930,6 @@
         <state line="128" column="8" selection-start="3372" selection-end="3372" vertical-scroll-proportion="0.33333334" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/searches/eventShow.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="83" selection-start="523" selection-end="523" vertical-scroll-proportion="-5.8846154">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/category/_addCat.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="10" selection-start="448" selection-end="531" vertical-scroll-proportion="-7.1923075">
@@ -989,9 +937,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/category_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="43" selection-start="336" selection-end="336" vertical-scroll-proportion="0.3516129">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/category/_edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="45" selection-start="612" selection-end="612" vertical-scroll-proportion="0.4797048">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/searches/eventShow.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="83" selection-start="523" selection-end="523" vertical-scroll-proportion="0.5387324">
           <folding />
         </state>
       </provider>
