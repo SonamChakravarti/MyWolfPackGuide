@@ -79,13 +79,19 @@ class EventsController < ApplicationController
 	def event_detail
 			@event_title= params[:etitle]
 			@cal_title= params[:calName]
-			event_id=params[:eid]			
-			service=session[:service]		
+			event_id=params[:eid]						
+			if session[:service].nil?
+				service = GCal4Ruby::Service.new
+   				 service.authenticate("the.wolfpackguide@gmail.com", "admin2wolfpack")
+   				 session[:service]=service		
+   			end
+   			service=session[:service]
 			puts "=========================================="
 			puts @event_title
 			puts @cal_title
 			puts event_id
 			puts service
+			puts session[:service]
 			puts "=========================================="
 
 			@cal = GCal4Ruby::Calendar.find(service,@cal_title, {})
