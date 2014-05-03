@@ -1,3 +1,6 @@
+
+
+
 <script>
     var myData = <%=raw @calid.to_json %>;
     $(document).ready(function() {
@@ -9,6 +12,17 @@
 <h1>Home Page</h1>
 <li><%= link_to "Edit Profile" ,'users/edituser'%></li>
 <li><%= link_to "View Flyers" ,'flyers/show'%></li>
+<%= form_tag '/searches/show', :method => 'get' do %>
+    <p>
+
+      <%= text_field_tag :search, params[:search] %>
+
+      <% options =options_for_select([['Department','Department'],['Calendar Name','Calendar Name'],['Event Name','Event Name']]) %>
+      <label>Type</label>
+      <%= select_tag :type, options %>
+      <%= submit_tag "Search", :name => nil %>
+    </p>
+<% end %>
 <div>
   <div id='calendar'></div>
 </div>

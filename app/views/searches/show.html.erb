@@ -1,0 +1,14 @@
+
+    <script>
+        var myData = <%=raw @cal.to_json %>;
+        $(document).ready(function() {
+            $('#calendar').fullCalendar({
+                eventSources: myData
+            });
+        });
+    </script>
+    <div>
+      <div id='calendar'></div>
+    </div>
+
+

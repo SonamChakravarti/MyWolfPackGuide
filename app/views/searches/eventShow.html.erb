@@ -1,0 +1,13 @@
+<br>
+<% for eve in @event %>
+        <p>Event Title:		 <%= eve.title %></p><br></br>
+        <p>Event Venue:	  <%= eve.where%></p><br></br>
+        <p>Event Start time:	  <%= eve.start_time %></p><br></br>
+        <p>Event End time:	  <%= eve.end_time %></p><br></br>
+        <p>Event Content:	  <%= eve.content %></p><br></br>
+        <p>Event Published:	  <%= eve.published %></p><br></br>
+        <p>Event Last Updated:	  <%= eve.updated %></p><br></br>
+        <p>Event Author Name:	  <%= eve.author_name%></p><br></br>
+        <p>Event Author Email:	  <%= eve.author_email%></p><br></br>
+
+<% end %>

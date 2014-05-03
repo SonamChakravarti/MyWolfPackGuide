@@ -1,4 +1,6 @@
 MyWolfPackGuide::Application.routes.draw do
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -72,6 +74,12 @@ MyWolfPackGuide::Application.routes.draw do
 
   get 'flyers/update' => 'flyers#update'
   post 'flyers/update' => 'flyers#update'
+
+  get 'searches/show' => 'searches#show'
+  post 'searches/show' => 'searches#show'
+
+  get 'searches/eventShow' => 'searches#eventShow'
+  post 'searches/eventShow' => 'searches#eventShow'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
