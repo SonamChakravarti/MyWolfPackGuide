@@ -11,6 +11,16 @@ class EventsController < ApplicationController
 	end
 
 
+	def rsvp_rem
+		event_title= params[:hid_etitle]
+		cal_title= params[:hid_calName]
+		eve_id=params[:hid_eid].strip
+		cal_id=params[:hid_calendar_id]
+
+		Rsvp.find_by_uid_and_event_name(session[:uid],event_title).destroy
+		redirect_to :controller=>'events',:action=>'event_detail', :etitle=>event_title,:calName => cal_title,:eid =>eve_id
+	end
+
 	def rsvp_events
 		service=session[:service]
 		# display all the rsvp'd events for the logged in user
@@ -61,7 +71,7 @@ class EventsController < ApplicationController
 		else
 			flash[:error]="Something went wrong with the request!"
 			#render action: "event_detail"
-			redirect_to events_detail_path
+			redirect_to :controller=>'events',:action=>'event_detail', :etitle=>event_title,:calName => cal_title,:eid =>eve_id
 		end
 	
 	end
