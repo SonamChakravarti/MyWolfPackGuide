@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<% if request.original_url!='http://0.0.0.0:3000'+root_path %>
+<% if request.path!=root_path %>
 <!-- Prevents nav to show up on landing page -->
 <% if !session[:uid].nil? %>
 	<% if User.find(session[:uid]).user_type=='A' %>
@@ -19,9 +19,9 @@
 			<div>
 			<ul class="nav navbar-nav navbar-left">
 
-			<li <% if request.original_url=='http://0.0.0.0:3000'+admin_home_path %> class="active" <% end %> ><a href=<%= admin_home_path %>>Home Page</a></li>
-			<li<% if request.original_url=='http://0.0.0.0:3000'+flyers_show_path %> class="active" <% end %>><a href=<%= flyers_show_path %>>View Flyers</a></li>
-			<li <% if request.original_url=='http://0.0.0.0:3000'+flyers_new_path %> class="active" <% end %>><a href=<%= flyers_new_path %>>Add Flyers</a></li>	
+			<li <% if request.path==admin_home_path %> class="active" <% end %> ><a href=<%= admin_home_path %>>Home Page</a></li>
+			<li<% if request.path==flyers_show_path %> class="active" <% end %>><a href=<%= flyers_show_path %>>View Flyers</a></li>
+			<li <% if request.path==flyers_new_path %> class="active" <% end %>><a href=<%= flyers_new_path %>>Add Flyers</a></li>	
 
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
@@ -37,13 +37,13 @@
 			<div>
 			<ul class="nav navbar-nav navbar-left">
 
-			<li <% if request.original_url=='http://0.0.0.0:3000'+home_page_path %> class="active" <% end %>><a href=<%= home_page_path %>>Home Page</a></li>
+			<li <% if request.path==home_page_path %> class="active" <% end %>><a href=<%= home_page_path %>>Home Page</a></li>
 
-			<li <% if request.original_url=='http://0.0.0.0:3000'+users_edituser_path %> class="active" <% end %>><a href=<%= users_edituser_path %>>Edit Profile</a></li>
+			<li <% if request.path==users_edituser_path %> class="active" <% end %>><a href=<%= users_edituser_path %>>Edit Profile</a></li>
 
-			<li <% if request.original_url=='http://0.0.0.0:3000'+events_rsvp_events_path %> class="active" <% end %>><a href=<%= events_rsvp_events_path %>>RSVP Events</a></li>
+			<li <% if request.path==events_rsvp_events_path %> class="active" <% end %>><a href=<%= events_rsvp_events_path %>>RSVP Events</a></li>
 
-			<li <% if request.original_url=='http://0.0.0.0:3000'+flyers_show_path %> class="active" <% end %>><a href=<%= flyers_show_path %>>Flyer View</a></li>
+			<li <% if request.path==flyers_show_path %> class="active" <% end %>><a href=<%= flyers_show_path %>>Flyer View</a></li>
 
 			</ul>
 			<ul class="nav navbar-nav navbar-right">

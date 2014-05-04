@@ -19,7 +19,6 @@
               <% end %>
           <% end %>
         </p>
-        <li><%= link_to 'Back', {:controller => 'users', :action=>'admin_home'} %></li>
      <% end %>
      <% if User.find(session[:uid]).user_type=='N' %>
         <% arr=User.find(session[:uid]).user_interest %>
@@ -44,7 +43,6 @@
                   <% end %>
           <% end %>
         </p>
-        <li><%= link_to 'Back', {:controller => 'users', :action=>'home_page'} %></li>
     <% end %>
 
 

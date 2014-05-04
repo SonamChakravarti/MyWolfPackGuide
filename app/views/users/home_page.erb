@@ -10,11 +10,8 @@
     });
 </script>
 <h1>Home Page</h1>
-<li><%= link_to "Edit Profile" ,'users/edituser'%></li>
-<li><%= link_to "RSVP Page" ,'events/rsvp_events'%></li>
-<li><%= link_to "View Flyers" ,'flyers/show'%></li>
 <%= form_tag '/searches/show', :method => 'get' do %>
-    <p>
+    <div align='right'>
 
       <%= text_field_tag :search, params[:search] %>
 
@@ -22,7 +19,7 @@
       <label>Type</label>
       <%= select_tag :type, options %>
       <%= submit_tag "Search", :name => nil %>
-    </p>
+    </div><br>
 <% end %>
 <div>
   <div id='calendar'></div>
