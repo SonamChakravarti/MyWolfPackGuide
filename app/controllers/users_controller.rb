@@ -136,7 +136,7 @@ class UsersController < ApplicationController
   def updateuser
     @use=User.find(params[:id])
     @use.user_name=params[:name]
-    @use.pwd=params[:password]
+    @use.password=params[:password]
     @use.department=params[:all_val]
     @use.user_interest=params[:user_interest]
     @use.save
