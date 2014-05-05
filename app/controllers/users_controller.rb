@@ -151,9 +151,22 @@ class UsersController < ApplicationController
 
 
   def home_page
+    usr = User.find(session[:uid])
+    department = usr.department
+    interests = usr.user_interest
+    catids = Array.new
+    catids << department.to_i
+    if !interests.nil?
+      catids.concat(interests)
+    end
+    calids = Calendar.where("category_id in (?)",catids)
+    @calid = calids.map(&:Calid)
+
+=begin
     @calid = Array.new
     @calid << "http://www.google.com/calendar/feeds/ncsu.edu_hpasl5cmtenq7biv0omve1nvq8@group.calendar.google.com/public/basic"
     @calid << "https://www.google.com/calendar/feeds/ncsu.edu_olma5do53nidmtbjtc9d7l0ue0%40group.calendar.google.com/public/basic"
+=end
 
     service = GCal4Ruby::Service.new
     service.authenticate("the.wolfpackguide@gmail.com", "admin2wolfpack")
